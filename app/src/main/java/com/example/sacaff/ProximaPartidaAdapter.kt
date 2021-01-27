@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_proximas_partidas.view.*
 
 class ProximaPartidaAdapter(val lista_proximas_partidas:List<ProximasPartidas>):RecyclerView.Adapter<ProximaPartidaAdapter.ProximaPartidaHolder>(){
 
@@ -25,9 +26,9 @@ class ProximaPartidaAdapter(val lista_proximas_partidas:List<ProximasPartidas>):
     class ProximaPartidaHolder(val view: View):RecyclerView.ViewHolder(view) {
 
         fun render(lista_proximas_partidas:ProximasPartidas){
-            view.findViewById<TextView>(R.id.titulo_deporte).text = lista_proximas_partidas.tipoDeporte
-            view.findViewById<TextView>(R.id.fecha_partido).text = lista_proximas_partidas.fecha
-            view.findViewById<TextView>(R.id.hora_partido).text = lista_proximas_partidas.horaInicio
+            view.titulo_deporte.text =  lista_proximas_partidas.tipoDeporte
+            view.fecha_partido.text =  lista_proximas_partidas.fecha
+            view.hora_partido.text =  lista_proximas_partidas.horaInicio
         }
 
     }
