@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tenis_item"
+        android:title="Tenis"
+        android:icon="@drawable/ic_action_tenis"/>
+
+    <item
+        android:id="@+id/futbol_item"
+        android:title="Futbol"
+        android:icon="@drawable/ic_action_futbol"/>
+
+</menu>

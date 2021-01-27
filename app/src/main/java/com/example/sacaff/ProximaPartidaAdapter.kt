@@ -29,6 +29,11 @@ class ProximaPartidaAdapter(val lista_proximas_partidas:List<ProximasPartidas>):
             view.titulo_deporte.text =  lista_proximas_partidas.tipoDeporte
             view.fecha_partido.text =  lista_proximas_partidas.fecha
             view.hora_partido.text =  lista_proximas_partidas.horaInicio
+            if(lista_proximas_partidas.tipoDeporte == "Tenis"){
+                view.img_deporte.setImageResource(R.drawable.tenis)
+            }else {
+                view.img_deporte.setImageResource(R.drawable.futbol)
+            }
         }
 
     }
