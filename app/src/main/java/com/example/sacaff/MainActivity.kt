@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
-import com.google.android.material.textview.MaterialTextView
 import kotlinx.android.synthetic.main.activity_menu_principal.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             val user_name = correo_usuario.editText?.text.toString()
             val password = password_usuario.editText?.text.toString();
 
-            val intent = Intent(this, MenuPrincipalActivity::class.java)
+            val intent = Intent(this, RegistroUsuarioActivity::class.java)
             startActivity(intent)
 
         }
