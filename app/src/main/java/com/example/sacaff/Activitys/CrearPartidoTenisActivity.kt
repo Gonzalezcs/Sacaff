@@ -1,7 +1,8 @@
-package com.example.sacaff
+package com.example.sacaff.Activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sacaff.R
 
 class CrearPartidoTenisActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

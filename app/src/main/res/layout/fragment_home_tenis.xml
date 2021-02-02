@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:alpha="0.8"
     android:background="@drawable/tenisbg"
-    tools:context=".homeTenisFragment">
+    tools:context=".Fragments.homeTenisFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

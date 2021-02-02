@@ -1,32 +1,32 @@
-package com.example.sacaff
+package com.example.sacaff.Activitys
 
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.view.WindowManager
 import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.sacaff.Models.ProximasPartidasModel
+import com.example.sacaff.R
+import com.example.sacaff.Fragments.homeFutbolFragment
+import com.example.sacaff.Fragments.homeTenisFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_menu_principal.*
 
 class MenuPrincipalActivity : AppCompatActivity() {
 
 
 
     private val proximas_partidas_tenis = listOf(
-        ProximasPartidas("Tenis","30-01-2021","08:00"),
-        ProximasPartidas("Tenis","13-02-2021","11:00"),
-        ProximasPartidas("Tenis","14-2021","12:30"),
-        ProximasPartidas("Tenis","30-01-2021","12:00"),
+        ProximasPartidasModel("Tenis","30-01-2021","08:00"),
+        ProximasPartidasModel("Tenis","13-02-2021","11:00"),
+        ProximasPartidasModel("Tenis","14-2021","12:30"),
+        ProximasPartidasModel("Tenis","30-01-2021","12:00"),
     )
 
     private val proximas_partidas_futbol = listOf(
-            ProximasPartidas("Futbol","20-02-2021","09:00"),
-            ProximasPartidas("Futbol","31-01-2021","14:00"),
-            ProximasPartidas("Futbol","12-02-2021","13:00"),
+            ProximasPartidasModel("Futbol","20-02-2021","09:00"),
+            ProximasPartidasModel("Futbol","31-01-2021","14:00"),
+            ProximasPartidasModel("Futbol","12-02-2021","13:00"),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

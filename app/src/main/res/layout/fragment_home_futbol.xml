@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:alpha="0.8"
     android:background="@drawable/futbolbg"
-    tools:context=".homeFutbolFragment">
+    tools:context=".Fragments.homeFutbolFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
