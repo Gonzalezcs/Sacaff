@@ -44,17 +44,6 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(applicationContext, R.layout.tv_entity, items)
         (input_sexo.editText as? AutoCompleteTextView)?.setAdapter(adapter)
 
-        inicializarVariables()
-
-
-
-
-
-    }
-
-    fun inicializarVariables(){
-
-
     }
 
     fun registarse(view: View){
@@ -71,6 +60,12 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         telefono = input_telefono.editText?.text.toString()
         fecha_nacimiento = input_fecha_nac.editText?.text.toString()
 
+        if(password == password2){
+            llamar_api_registro()
+        }else{
+            Toast.makeText(this@RegistroUsuarioActivity,"Contraseñas no coindicen", Toast.LENGTH_LONG).show()
+        }
+
         val services: RegistroService = RestEngine.getRestEngine().create(RegistroService::class.java)
         var body = BodyRegistroModel(correo = correo,password = password,primer_nombre = primer_nombre,segundo_nombre = segundo_nombre,apellido_paterno = apellido_paterno,
                                     apellido_materno = apellido_materno,sexo = sexo,rut = rut,telefono = telefono,fecha_nacimiento = fecha_nacimiento)
@@ -81,19 +76,23 @@ class RegistroUsuarioActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<RegistroModel>, response: Response<RegistroModel>) {
                 if (response.body()!!.status) {
-                    Toast.makeText(this@RegistroUsuarioActivity,"Correcto registro", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegistroUsuarioActivity,"Correcto registro", Toast.LENGTH_LONG).show()
 
                 }else{
-                    Toast.makeText(this@RegistroUsuarioActivity,"Correo o Contraseña incorrecto", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegistroUsuarioActivity,"Correo o Contraseña incorrecto", Toast.LENGTH_LONG).show()
                 }
 
 
             }
             override fun onFailure(call: Call<RegistroModel>, t: Throwable) {
-                Toast.makeText(this@RegistroUsuarioActivity,"Error en la red", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RegistroUsuarioActivity,"Error en la red", Toast.LENGTH_LONG).show()
             }
 
 
         })
+    }
+
+    fun llamar_api_registro(){
+
     }
 }

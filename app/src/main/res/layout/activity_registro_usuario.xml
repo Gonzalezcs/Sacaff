@@ -49,9 +49,14 @@
                 android:id="@+id/input_primer_nombre"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Primer Nombre">
+                android:hint="Primer Nombre"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:counterTextColor="@color/black"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -63,9 +68,12 @@
                 android:id="@+id/input_segundo_nombre"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Segundo Nombre">
+                android:hint="Segundo Nombre"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -77,9 +85,13 @@
                 android:id="@+id/input_apellido_paterno"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Apellido Paterno">
+                android:hint="Apellido Paterno"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -91,9 +103,13 @@
                 android:id="@+id/input_apellido_materno"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Apellido Materno">
+                android:hint="Apellido Materno"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -105,9 +121,10 @@
                 android:id="@+id/input_sexo"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:hint="Sexo"
+                app:errorEnabled="true"
                 app:startIconDrawable="@drawable/ic_action_futbol">
 
                 <AutoCompleteTextView
@@ -125,9 +142,13 @@
                 android:id="@+id/input_rut"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Rut">
+                android:hint="Rut"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -140,9 +161,11 @@
                 android:id="@+id/input_fecha_nac"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Fecha Nacimiento">
+                android:hint="Fecha Nacimiento"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_action_calendario">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -155,9 +178,13 @@
                 android:id="@+id/input_telefono"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Teléfono Movil">
+                android:hint="Teléfono Movil"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="8"
+                app:startIconDrawable="@drawable/ic_action_telefono">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -170,9 +197,13 @@
                 android:id="@+id/input_correo"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="Correo">
+                android:hint="Correo"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:startIconDrawable="@drawable/ic_action_mail">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -185,10 +216,14 @@
                 android:id="@+id/input_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="Contraseña"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:startIconDrawable="@drawable/ic_action_pass">
 
                 <com.google.android.material.textfield.TextInputEditText
 
@@ -201,10 +236,14 @@
                 android:id="@+id/input_repetir_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:hint="Repetir Contraseña"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:startIconDrawable="@drawable/ic_action_pass">
 
                 <com.google.android.material.textfield.TextInputEditText
 
