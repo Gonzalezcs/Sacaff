@@ -37,8 +37,10 @@
             android:hint="Correo">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_correo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="gonzalez.canales.sebastian@gmail.com"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,13 +50,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            app:passwordToggleEnabled="true"
+            app:passwordToggleEnabled="false"
             android:hint="Contraseña">
 
             <com.google.android.material.textfield.TextInputEditText
 
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:text="genkidama1234"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

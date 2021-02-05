@@ -2,6 +2,8 @@ package com.example.sacaff.Activitys
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
@@ -9,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.sacaff.BodyPosts.BodyRegistroModel
 import com.example.sacaff.BodyPosts.bodyLoginModel
+import com.example.sacaff.Fragments.DatePickerFragment
 import com.example.sacaff.Models.LoginModel
 import com.example.sacaff.Models.RegistroModel
 import com.example.sacaff.R
@@ -16,10 +19,13 @@ import com.example.sacaff.Services.LoginService
 import com.example.sacaff.Services.RegistroService
 import com.example.sacaff.Utils.RestEngine
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_registro_usuario.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.time.Month
+import java.time.Year
 
 class RegistroUsuarioActivity : AppCompatActivity() {
 
@@ -43,6 +49,42 @@ class RegistroUsuarioActivity : AppCompatActivity() {
         val items = listOf("Masculino", "Femenino")
         val adapter = ArrayAdapter(applicationContext, R.layout.tv_entity, items)
         (input_sexo.editText as? AutoCompleteTextView)?.setAdapter(adapter)
+
+        edit_rut.addTextChangedListener(object: TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                edit_rut.removeTextChangedListener(this)
+
+                if(s.length>1){
+                    var rut_text = s.toString();
+                    rut_text = rut_text.replace("-", "")
+                    rut_text = rut_text.substring(0,rut_text.length-1)+"-"+rut_text.substring(rut_text.length-1,rut_text.length)
+                    edit_rut.setText(rut_text)
+                    edit_rut.setSelection(rut_text.length)
+
+                }
+                edit_rut.addTextChangedListener(this)
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+        })
+
+        input_fecha_nac.setOnClickListener {  showDatePickerDialog()}
+
+    }
+
+    private fun showDatePickerDialog() {
+        val datepicker = DatePickerFragment{day, month, year ->onDateSelected(day, month, year) }
+        datepicker.show(supportFragmentManager,"datePicker")
+
+    }
+
+    fun onDateSelected(day:Int, month: Int,year: Int){
 
     }
 

@@ -151,6 +151,8 @@
                 app:startIconDrawable="@drawable/ic_action_user">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_rut"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,-,k"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none" />
@@ -168,6 +170,7 @@
                 app:startIconDrawable="@drawable/ic_action_calendario">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_fecha_nac"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none" />
@@ -206,9 +209,10 @@
                 app:startIconDrawable="@drawable/ic_action_mail">
 
                 <com.google.android.material.textfield.TextInputEditText
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="none" />
+                    android:inputType="textEmailAddress"  />
 
             </com.google.android.material.textfield.TextInputLayout>
 
